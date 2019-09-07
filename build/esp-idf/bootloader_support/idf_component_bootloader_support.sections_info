@@ -97,7 +97,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
  25 .text.bootloader_common_set_flash_cs_timing 0000006e  00000000  00000000  00000a60  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 26 .rodata.__func__$4172 00000027  00000000  00000000  00000ad0  2**2
+ 26 .rodata.__func__$4185 00000027  00000000  00000000  00000ad0  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
  27 .debug_frame  00000130  00000000  00000000  00000af8  2**2
                   CONTENTS, RELOC, READONLY, DEBUGGING

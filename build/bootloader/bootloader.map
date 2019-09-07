@@ -1390,7 +1390,7 @@ LOAD c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0\l
                 0x3fff0d04      0x436 esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.obj)
                                 0x43e (size before relaxing)
  *fill*         0x3fff113a        0x2 
- .rodata.__func__$4726
+ .rodata.__func__$4739
                 0x3fff113c       0x10 esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.obj)
  .rodata.str1.4
                 0x3fff114c      0x28e esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.obj)

@@ -35,18 +35,18 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_49792"
-[1/2] Building C object CMakeFiles/cmTC_49792.dir/testCCompiler.c.obj
-[2/2] Linking C executable cmTC_49792
+Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_a6605"
+[1/2] Building C object CMakeFiles/cmTC_a6605.dir/testCCompiler.c.obj
+[2/2] Linking C executable cmTC_a6605
 c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00400054
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_2dc70"
-[1/2] Building C object CMakeFiles/cmTC_2dc70.dir/CMakeCCompilerABI.c.obj
-[2/2] Linking C executable cmTC_2dc70
+Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_0b1c4"
+[1/2] Building C object CMakeFiles/cmTC_0b1c4.dir/CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_0b1c4
 Using built-in specs.
 COLLECT_GCC=C:\PROGRA~1\ESPRES~1\ESP-ID~1\tools\bin\XT8994~1.EXE
 COLLECT_LTO_WRAPPER=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe
@@ -56,8 +56,8 @@ Thread model: posix
 gcc version 5.2.0 (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a5) 
 COMPILER_PATH=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/;c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/;c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/
 LIBRARY_PATH=c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/;c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/;c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib/;c:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib/
-COLLECT_GCC_OPTIONS='-mlongcalls' '-nostdlib' '-v' '-o' 'cmTC_2dc70'
- c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/collect2.exe -plugin c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/liblto_plugin-0.dll -plugin-opt=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\Jakob\AppData\Local\Temp\cccuWypq.res --sysroot=c:\progra~1\espres~1\esp-id~1\tools\bin\../xtensa-esp32-elf/sysroot -o cmTC_2dc70 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib CMakeFiles/cmTC_2dc70.dir/CMakeCCompilerABI.c.obj
+COLLECT_GCC_OPTIONS='-mlongcalls' '-nostdlib' '-v' '-o' 'cmTC_0b1c4'
+ c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/collect2.exe -plugin c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/liblto_plugin-0.dll -plugin-opt=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\Jakob\AppData\Local\Temp\ccqKpH2i.res --sysroot=c:\progra~1\espres~1\esp-id~1\tools\bin\../xtensa-esp32-elf/sysroot -o cmTC_0b1c4 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib CMakeFiles/cmTC_0b1c4.dir/CMakeCCompilerABI.c.obj
 c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00400074
 
 
@@ -65,9 +65,9 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(xtensa-esp32-elf-ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_2dc70"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_2dc70.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [[2/2] Linking C executable cmTC_2dc70]
+  ignore line: [Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_0b1c4"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_0b1c4.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [[2/2] Linking C executable cmTC_0b1c4]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:\PROGRA~1\ESPRES~1\ESP-ID~1\tools\bin\XT8994~1.EXE]
   ignore line: [COLLECT_LTO_WRAPPER=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe]
@@ -82,21 +82,21 @@ Parsed C implicit link information from above output:
   ignore line: [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/]
   ignore line: [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib/]
   ignore line: [c:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-nostdlib' '-v' '-o' 'cmTC_2dc70']
-  link line: [ c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/collect2.exe -plugin c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/liblto_plugin-0.dll -plugin-opt=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\Jakob\AppData\Local\Temp\cccuWypq.res --sysroot=c:\progra~1\espres~1\esp-id~1\tools\bin\../xtensa-esp32-elf/sysroot -o cmTC_2dc70 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib CMakeFiles/cmTC_2dc70.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-nostdlib' '-v' '-o' 'cmTC_0b1c4']
+  link line: [ c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/collect2.exe -plugin c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/liblto_plugin-0.dll -plugin-opt=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\Jakob\AppData\Local\Temp\ccqKpH2i.res --sysroot=c:\progra~1\espres~1\esp-id~1\tools\bin\../xtensa-esp32-elf/sysroot -o cmTC_0b1c4 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib CMakeFiles/cmTC_0b1c4.dir/CMakeCCompilerABI.c.obj]
     arg [c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
     arg [c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/liblto_plugin-0.dll] ==> ignore
     arg [-plugin-opt=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe] ==> ignore
-    arg [-plugin-opt=-fresolution=C:\Users\Jakob\AppData\Local\Temp\cccuWypq.res] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\Jakob\AppData\Local\Temp\ccqKpH2i.res] ==> ignore
     arg [--sysroot=c:\progra~1\espres~1\esp-id~1\tools\bin\../xtensa-esp32-elf/sysroot] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_2dc70] ==> ignore
+    arg [cmTC_0b1c4] ==> ignore
     arg [-Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0] ==> dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0]
     arg [-Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc] ==> dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc]
     arg [-Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib] ==> dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib]
     arg [-Lc:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib] ==> dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib]
-    arg [CMakeFiles/cmTC_2dc70.dir/CMakeCCompilerABI.c.obj] ==> ignore
+    arg [CMakeFiles/cmTC_0b1c4.dir/CMakeCCompilerABI.c.obj] ==> ignore
   collapse library dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0] ==> [C:/Program Files/Espressif/ESP-IDF Tools/tools/lib/gcc/xtensa-esp32-elf/5.2.0]
   collapse library dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc] ==> [C:/Program Files/Espressif/ESP-IDF Tools/tools/lib/gcc]
   collapse library dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib] ==> [C:/Program Files/Espressif/ESP-IDF Tools/tools/xtensa-esp32-elf/lib]
@@ -111,9 +111,9 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_4e995"
-[1/2] Building C object CMakeFiles/cmTC_4e995.dir/feature_tests.c.obj
-[2/2] Linking C executable cmTC_4e995
+Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_e440f"
+[1/2] Building C object CMakeFiles/cmTC_e440f.dir/feature_tests.c.obj
+[2/2] Linking C executable cmTC_e440f
 c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00400074
 
 
@@ -126,9 +126,9 @@ c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_7b35e"
-[1/2] Building C object CMakeFiles/cmTC_7b35e.dir/feature_tests.c.obj
-[2/2] Linking C executable cmTC_7b35e
+Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_8b279"
+[1/2] Building C object CMakeFiles/cmTC_8b279.dir/feature_tests.c.obj
+[2/2] Linking C executable cmTC_8b279
 c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00400074
 
 
@@ -141,9 +141,9 @@ c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_ab4a6"
-[1/2] Building C object CMakeFiles/cmTC_ab4a6.dir/feature_tests.c.obj
-[2/2] Linking C executable cmTC_ab4a6
+Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_f4420"
+[1/2] Building C object CMakeFiles/cmTC_f4420.dir/feature_tests.c.obj
+[2/2] Linking C executable cmTC_f4420
 c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00400074
 
 
@@ -154,18 +154,18 @@ c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_daa4f"
-[1/2] Building CXX object CMakeFiles/cmTC_daa4f.dir/testCXXCompiler.cxx.obj
-[2/2] Linking CXX executable cmTC_daa4f
+Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_85971"
+[1/2] Building CXX object CMakeFiles/cmTC_85971.dir/testCXXCompiler.cxx.obj
+[2/2] Linking CXX executable cmTC_85971
 c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00400054
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_7f57f"
-[1/2] Building CXX object CMakeFiles/cmTC_7f57f.dir/CMakeCXXCompilerABI.cpp.obj
-[2/2] Linking CXX executable cmTC_7f57f
+Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_d56b5"
+[1/2] Building CXX object CMakeFiles/cmTC_d56b5.dir/CMakeCXXCompilerABI.cpp.obj
+[2/2] Linking CXX executable cmTC_d56b5
 Using built-in specs.
 COLLECT_GCC=C:\PROGRA~1\ESPRES~1\ESP-ID~1\tools\bin\XT1FE9~1.EXE
 COLLECT_LTO_WRAPPER=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe
@@ -175,8 +175,8 @@ Thread model: posix
 gcc version 5.2.0 (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a5) 
 COMPILER_PATH=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/;c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/;c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/
 LIBRARY_PATH=c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/;c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/;c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib/;c:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib/
-COLLECT_GCC_OPTIONS='-mlongcalls' '-nostdlib' '-v' '-o' 'cmTC_7f57f'
- c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/collect2.exe -plugin c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/liblto_plugin-0.dll -plugin-opt=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\Jakob\AppData\Local\Temp\ccaLbHW8.res --sysroot=c:\progra~1\espres~1\esp-id~1\tools\bin\../xtensa-esp32-elf/sysroot -o cmTC_7f57f -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib CMakeFiles/cmTC_7f57f.dir/CMakeCXXCompilerABI.cpp.obj
+COLLECT_GCC_OPTIONS='-mlongcalls' '-nostdlib' '-v' '-o' 'cmTC_d56b5'
+ c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/collect2.exe -plugin c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/liblto_plugin-0.dll -plugin-opt=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\Jakob\AppData\Local\Temp\ccUDi0dZ.res --sysroot=c:\progra~1\espres~1\esp-id~1\tools\bin\../xtensa-esp32-elf/sysroot -o cmTC_d56b5 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib CMakeFiles/cmTC_d56b5.dir/CMakeCXXCompilerABI.cpp.obj
 c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00400074
 
 
@@ -184,9 +184,9 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(xtensa-esp32-elf-ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_7f57f"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_7f57f.dir/CMakeCXXCompilerABI.cpp.obj]
-  ignore line: [[2/2] Linking CXX executable cmTC_7f57f]
+  ignore line: [Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_d56b5"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_d56b5.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [[2/2] Linking CXX executable cmTC_d56b5]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:\PROGRA~1\ESPRES~1\ESP-ID~1\tools\bin\XT1FE9~1.EXE]
   ignore line: [COLLECT_LTO_WRAPPER=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe]
@@ -201,21 +201,21 @@ Parsed CXX implicit link information from above output:
   ignore line: [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/]
   ignore line: [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib/]
   ignore line: [c:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-nostdlib' '-v' '-o' 'cmTC_7f57f']
-  link line: [ c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/collect2.exe -plugin c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/liblto_plugin-0.dll -plugin-opt=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\Jakob\AppData\Local\Temp\ccaLbHW8.res --sysroot=c:\progra~1\espres~1\esp-id~1\tools\bin\../xtensa-esp32-elf/sysroot -o cmTC_7f57f -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib CMakeFiles/cmTC_7f57f.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-nostdlib' '-v' '-o' 'cmTC_d56b5']
+  link line: [ c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/collect2.exe -plugin c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/liblto_plugin-0.dll -plugin-opt=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\Jakob\AppData\Local\Temp\ccUDi0dZ.res --sysroot=c:\progra~1\espres~1\esp-id~1\tools\bin\../xtensa-esp32-elf/sysroot -o cmTC_d56b5 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0 -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib -Lc:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib CMakeFiles/cmTC_d56b5.dir/CMakeCXXCompilerABI.cpp.obj]
     arg [c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
     arg [c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/liblto_plugin-0.dll] ==> ignore
     arg [-plugin-opt=c:/progra~1/espres~1/esp-id~1/tools/bin/../libexec/gcc/xtensa-esp32-elf/5.2.0/lto-wrapper.exe] ==> ignore
-    arg [-plugin-opt=-fresolution=C:\Users\Jakob\AppData\Local\Temp\ccaLbHW8.res] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\Jakob\AppData\Local\Temp\ccUDi0dZ.res] ==> ignore
     arg [--sysroot=c:\progra~1\espres~1\esp-id~1\tools\bin\../xtensa-esp32-elf/sysroot] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_7f57f] ==> ignore
+    arg [cmTC_d56b5] ==> ignore
     arg [-Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0] ==> dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0]
     arg [-Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc] ==> dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc]
     arg [-Lc:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib] ==> dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib]
     arg [-Lc:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib] ==> dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../xtensa-esp32-elf/sysroot/lib]
-    arg [CMakeFiles/cmTC_7f57f.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+    arg [CMakeFiles/cmTC_d56b5.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
   collapse library dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0] ==> [C:/Program Files/Espressif/ESP-IDF Tools/tools/lib/gcc/xtensa-esp32-elf/5.2.0]
   collapse library dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc] ==> [C:/Program Files/Espressif/ESP-IDF Tools/tools/lib/gcc]
   collapse library dir [c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib] ==> [C:/Program Files/Espressif/ESP-IDF Tools/tools/xtensa-esp32-elf/lib]
@@ -230,9 +230,9 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_371dc"
-[1/2] Building CXX object CMakeFiles/cmTC_371dc.dir/feature_tests.cxx.obj
-[2/2] Linking CXX executable cmTC_371dc
+Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_cd7cf"
+[1/2] Building CXX object CMakeFiles/cmTC_cd7cf.dir/feature_tests.cxx.obj
+[2/2] Linking CXX executable cmTC_cd7cf
 c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00400074
 
 
@@ -298,9 +298,9 @@ c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_fba8d"
-[1/2] Building CXX object CMakeFiles/cmTC_fba8d.dir/feature_tests.cxx.obj
-[2/2] Linking CXX executable cmTC_fba8d
+Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_4f421"
+[1/2] Building CXX object CMakeFiles/cmTC_4f421.dir/feature_tests.cxx.obj
+[2/2] Linking CXX executable cmTC_4f421
 c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00400074
 
 
@@ -366,9 +366,9 @@ c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_3bcff"
-[1/2] Building CXX object CMakeFiles/cmTC_3bcff.dir/feature_tests.cxx.obj
-[2/2] Linking CXX executable cmTC_3bcff
+Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_f1f39"
+[1/2] Building CXX object CMakeFiles/cmTC_f1f39.dir/feature_tests.cxx.obj
+[2/2] Linking CXX executable cmTC_f1f39
 c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00400074
 
 
@@ -434,9 +434,9 @@ c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_48d8c"
-[1/2] Building CXX object CMakeFiles/cmTC_48d8c.dir/feature_tests.cxx.obj
-[2/2] Linking CXX executable cmTC_48d8c
+Run Build Command:"C:/PROGRA~1/ESPRES~1/ESP-ID~1/tools/bin/ninja.exe" "cmTC_8cdf6"
+[1/2] Building CXX object CMakeFiles/cmTC_8cdf6.dir/feature_tests.cxx.obj
+[2/2] Linking CXX executable cmTC_8cdf6
 c:/progra~1/espres~1/esp-id~1/tools/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00400074
 
 

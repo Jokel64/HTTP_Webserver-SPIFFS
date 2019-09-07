@@ -13,10 +13,9 @@
 #include <esp_system.h>
 #include <nvs_flash.h>
 #include <sys/param.h>
+#include "esp_spiffs.h"
 
 #include <esp_http_server.h>
-
-static const char* HTML ="<!DOCTYPE html><html><body><h1>My First Heading</h1><p>My first paragraph.</p></body></html>";
 
 /* A simple example that demonstrates how to create GET and POST
  * handlers for the web server.
@@ -29,6 +28,63 @@ static const char* HTML ="<!DOCTYPE html><html><body><h1>My First Heading</h1><p
 
 static const char *TAG="APP";
 static const char *DEBUG="DEBUG";
+
+long getIndex(char* content){
+    esp_vfs_spiffs_conf_t conf = {
+      .base_path = "/spiffs",
+      .partition_label = NULL,
+      .max_files = 5,
+      .format_if_mount_failed = true
+    };
+
+     // Use settings defined above to initialize and mount SPIFFS filesystem.
+    // Note: esp_vfs_spiffs_register is an all-in-one convenience function.
+    esp_err_t ret = esp_vfs_spiffs_register(&conf);
+
+    if (ret != ESP_OK) {
+        if (ret == ESP_FAIL) {
+            ESP_LOGE(TAG, "Failed to mount or format filesystem");
+        } else if (ret == ESP_ERR_NOT_FOUND) {
+            ESP_LOGE(TAG, "Failed to find SPIFFS partition");
+        } else {
+            ESP_LOGE(TAG, "Failed to initialize SPIFFS (%s)", esp_err_to_name(ret));
+        }
+    }
+
+    size_t total = 0, used = 0;
+    ret = esp_spiffs_info(NULL, &total, &used);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to get SPIFFS partition information (%s)", esp_err_to_name(ret));
+    } else {
+        ESP_LOGI(TAG, "Partition size: total: %d, used: %d", total, used);
+    }
+    
+     // Open renamed file for reading
+    ESP_LOGI(TAG, "Reading file");
+    FILE* f = fopen("/spiffs/index.html", "r");
+    if (f == NULL) {
+        ESP_LOGE(TAG, "Failed to open file for reading");
+        return;
+    }
+    
+    fseek(f, 0, SEEK_END);
+    long fsize = ftell(f);
+    fseek(f, 0, SEEK_SET);  /* same as rewind(f); */
+
+    char* string = malloc (fsize + 1);
+    fread(string, 1, fsize, f);
+    fclose(f);
+
+    string[fsize] = 0;
+
+    ESP_LOGI(TAG, "Read from file: '%s'", string);
+    strcat(content, string);
+
+    // All done, unmount partition and disable SPIFFS
+    esp_vfs_spiffs_unregister(NULL);
+    ESP_LOGI(TAG, "SPIFFS unmounted");
+    return fsize;
+}
 
 
 /* An HTTP GET handler */
@@ -99,7 +155,12 @@ esp_err_t hello_get_handler(httpd_req_t *req)
 
     /* Send response with custom headers and body set as the
      * string passed in user context*/
-    httpd_resp_send(req, HTML, strlen(HTML));
+    long len = 1024;
+    char content[len];
+    content[0] = '\0';
+    long l = getIndex(&content);
+    ESP_LOGI(DEBUG, "Content ist: %s\n length ist:%ld", content, l);
+    httpd_resp_send(req, content, l);
 
     /* After sending the HTTP response the old HTTP request
      * headers are lost. Check if HTTP request headers can be read now. */

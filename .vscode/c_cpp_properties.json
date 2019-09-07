@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${env:IDF_PATH}/components/**",
-                "C:/Users/Jakob/ESP32/esp-idf/components/newlib/include"
+                "C:/Users/Jakob/ESP32/esp-idf/components/newlib/include",
+                "C:/Users/Jakob/ESP32/esp-idf/components/spiffs/include"
             ],
             "defines": [
                 "_DEBUG",
@@ -13,7 +14,7 @@
                 "_UNICODE"
             ],
             "intelliSenseMode": "${default}",
-            "compilerPath": "C:\\Program Files\\Espressif\\ESP-IDF Tools\\tools\\bin\\xtensa-esp32-elf-gcc.exe",
+            "compilerPath": "\"C:\\Program Files\\Espressif\\ESP-IDF Tools\\tools\\bin\\xtensa-esp32-elf-gcc.exe\"",
             "compileCommands": "${workspaceFolder}/build/bootloader/compile_commands.json"
         }
     ],

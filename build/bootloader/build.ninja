@@ -241,7 +241,7 @@ build esp-idf/CMakeFiles/bootloader: phony bootloader.bin || bootloader.elf dumm
 # Custom command for bootloader.bin
 
 build bootloader.bin: CUSTOM_COMMAND bootloader.elf || bootloader.elf dummy_main_src esp-idf/bootloader_support/idf_component_bootloader_support_sections_info esp-idf/bootloader_support/libbootloader_support.a esp-idf/efuse/idf_component_efuse_sections_info esp-idf/efuse/libefuse.a esp-idf/ldgen esp-idf/ldgen_section_infos esp-idf/log/idf_component_log_sections_info esp-idf/log/liblog.a esp-idf/main/idf_component_main_sections_info esp-idf/main/libmain.a esp-idf/micro-ecc/idf_component_micro-ecc_sections_info esp-idf/micro-ecc/libmicro-ecc.a esp-idf/soc/idf_component_soc_sections_info esp-idf/soc/libsoc.a esp-idf/spi_flash/idf_component_spi_flash_sections_info esp-idf/spi_flash/libspi_flash.a
-  COMMAND = cmd.exe /C "cd /D C:\Users\Jakob\ESP32\apps\hello_world\build\bootloader && C:\Users\Jakob\AppData\Local\Programs\Python\Python27\python.exe C:/Users/Jakob/ESP32/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB -o C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/bootloader.bin bootloader.elf"
+  COMMAND = cmd.exe /C "cd /D C:\Users\Jakob\ESP32\apps\hello_world\build\bootloader && C:\Users\Jakob\AppData\Local\Programs\Python\Python27\python.exe C:/Users/Jakob/ESP32/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 40m --flash_size 4MB -o C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader/bootloader.bin bootloader.elf"
   DESC = Generating ../bootloader.bin
   restat = 1
 
