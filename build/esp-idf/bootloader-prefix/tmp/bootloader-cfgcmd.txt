@@ -1,0 +1,1 @@
+cmd='C:/Program Files/CMake/bin/cmake.exe;-DSDKCONFIG=C:/Users/Jakob/ESP32/apps/hello_world/sdkconfig;-DIDF_PATH=C:/Users/Jakob/ESP32/esp-idf;-DSECURE_BOOT_SIGNING_KEY=C:/Users/Jakob/ESP32/apps/hello_world;-DEXTRA_COMPONENT_DIRS=C:/Users/Jakob/ESP32/esp-idf/components/bootloader;-GNinja;<SOURCE_DIR><SOURCE_SUBDIR>'

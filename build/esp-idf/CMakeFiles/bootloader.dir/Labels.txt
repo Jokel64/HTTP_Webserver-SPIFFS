@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/CMakeFiles/bootloader
+C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/CMakeFiles/bootloader.rule
+C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/CMakeFiles/bootloader-complete.rule
+C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule

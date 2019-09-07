@@ -1,0 +1,18 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "C:/Users/Jakob/ESP32/esp-idf/components/bootloader/subproject",
+    "build_dir":          "C:/Users/Jakob/ESP32/apps/hello_world/build/bootloader",
+    "config_file":        "C:/Users/Jakob/ESP32/apps/hello_world/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v3.3",
+    "phy_data_partition": "",
+    "monitor_baud" : "115200",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : " C:/Users/Jakob/ESP32/esp-idf/components/efuse/Kconfig C:/Users/Jakob/ESP32/esp-idf/components/esp32/Kconfig C:/Users/Jakob/ESP32/esp-idf/components/log/Kconfig C:/Users/Jakob/ESP32/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : " C:/Users/Jakob/ESP32/esp-idf/components/bootloader/Kconfig.projbuild C:/Users/Jakob/ESP32/esp-idf/components/esptool_py/Kconfig.projbuild C:/Users/Jakob/ESP32/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "soc", "esp32", "log", "bootloader", "spi_flash", "micro-ecc", "efuse", "bootloader_support", "main", "esptool_py", "partition_table" ],
+    "build_component_paths" : [ "C:/Users/Jakob/ESP32/esp-idf/components/soc", "C:/Users/Jakob/ESP32/esp-idf/components/esp32", "C:/Users/Jakob/ESP32/esp-idf/components/log", "C:/Users/Jakob/ESP32/esp-idf/components/bootloader", "C:/Users/Jakob/ESP32/esp-idf/components/spi_flash", "C:/Users/Jakob/ESP32/esp-idf/components/micro-ecc", "C:/Users/Jakob/ESP32/esp-idf/components/efuse", "C:/Users/Jakob/ESP32/esp-idf/components/bootloader_support", "C:/Users/Jakob/ESP32/esp-idf/components/bootloader/subproject/main", "C:/Users/Jakob/ESP32/esp-idf/components/esptool_py", "C:/Users/Jakob/ESP32/esp-idf/components/partition_table" ]
+}
