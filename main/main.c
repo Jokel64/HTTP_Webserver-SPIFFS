@@ -100,12 +100,9 @@ esp_err_t hello_get_handler(httpd_req_t *req)
     /* Send response with custom headers and body set as the
      * string passed in user context*/
     char* buffer = getPage("/spiffs/index.html");
-
-    ESP_LOGI(DEBUG, "Buffer in main is: %s", buffer);
-
-    ESP_LOGI(DEBUG, "blabla");
     httpd_resp_send(req, buffer, strlen(buffer));
     free(buffer);
+    
 
     /* After sending the HTTP response the old HTTP request
      * headers are lost. Check if HTTP request headers can be read now. */
