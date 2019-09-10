@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
-  include("C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
+  include("C:/Users/Jakob/ESP32/apps/EMT_DSP_Webserver/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
+  include("C:/Users/Jakob/ESP32/apps/EMT_DSP_Webserver/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
 
 endif()
 

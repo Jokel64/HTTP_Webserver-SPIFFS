@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Jakob/ESP32/apps/hello_world/main
+# Install script for directory: C:/Users/Jakob/ESP32/apps/EMT_DSP_Webserver/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -61,6 +61,7 @@ esp_err_t unmountSPIFFS(){
     return ret;
 }
 
+//provides a pointer to the page using malloc
 char * getPage(char* path) 
 {
     // If it hasn't been mounted yet, do it

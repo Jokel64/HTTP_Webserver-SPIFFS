@@ -1,4 +1,4 @@
-In archive C:/Users/Jakob/ESP32/apps/hello_world/build/esp-idf/tcpip_adapter/libtcpip_adapter.a:
+In archive C:/Users/Jakob/ESP32/apps/EMT_DSP_Webserver/build/esp-idf/tcpip_adapter/libtcpip_adapter.a:
 
 tcpip_adapter_lwip.c.obj:     file format elf32-xtensa-le
 
@@ -274,13 +274,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, RELOC, READONLY, DEBUGGING
 134 .debug_line   000018e8  00000000  00000000  0000725b  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
-135 .debug_str    0000246f  00000000  00000000  00008b43  2**0
+135 .debug_str    00002475  00000000  00000000  00008b43  2**0
                   CONTENTS, READONLY, DEBUGGING
-136 .comment      0000003c  00000000  00000000  0000afb2  2**0
+136 .comment      0000003c  00000000  00000000  0000afb8  2**0
                   CONTENTS, READONLY
-137 .xtensa.info  00000038  00000000  00000000  0000afee  2**0
+137 .xtensa.info  00000038  00000000  00000000  0000aff4  2**0
                   CONTENTS, READONLY
-138 .xt.lit       000001b8  00000000  00000000  0000b026  2**0
+138 .xt.lit       000001b8  00000000  00000000  0000b02c  2**0
                   CONTENTS, RELOC, READONLY
-139 .xt.prop      00001968  00000000  00000000  0000b1de  2**0
+139 .xt.prop      00001968  00000000  00000000  0000b1e4  2**0
                   CONTENTS, RELOC, READONLY
