@@ -17,6 +17,8 @@
 
 #include <esp_http_server.h>
 
+#include <src/pageprovider.h>
+
 /* A simple example that demonstrates how to create GET and POST
  * handlers for the web server.
  * The examples use simple WiFi configuration that you can set via
@@ -28,64 +30,6 @@
 
 static const char *TAG="APP";
 static const char *DEBUG="DEBUG";
-
-long getIndex(char* content){
-    esp_vfs_spiffs_conf_t conf = {
-      .base_path = "/spiffs",
-      .partition_label = NULL,
-      .max_files = 5,
-      .format_if_mount_failed = true
-    };
-
-     // Use settings defined above to initialize and mount SPIFFS filesystem.
-    // Note: esp_vfs_spiffs_register is an all-in-one convenience function.
-    esp_err_t ret = esp_vfs_spiffs_register(&conf);
-
-    if (ret != ESP_OK) {
-        if (ret == ESP_FAIL) {
-            ESP_LOGE(TAG, "Failed to mount or format filesystem");
-        } else if (ret == ESP_ERR_NOT_FOUND) {
-            ESP_LOGE(TAG, "Failed to find SPIFFS partition");
-        } else {
-            ESP_LOGE(TAG, "Failed to initialize SPIFFS (%s)", esp_err_to_name(ret));
-        }
-    }
-
-    size_t total = 0, used = 0;
-    ret = esp_spiffs_info(NULL, &total, &used);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to get SPIFFS partition information (%s)", esp_err_to_name(ret));
-    } else {
-        ESP_LOGI(TAG, "Partition size: total: %d, used: %d", total, used);
-    }
-    
-     // Open renamed file for reading
-    ESP_LOGI(TAG, "Reading file");
-    FILE* f = fopen("/spiffs/index.html", "r");
-    if (f == NULL) {
-        ESP_LOGE(TAG, "Failed to open file for reading");
-        return;
-    }
-    
-    fseek(f, 0, SEEK_END);
-    long fsize = ftell(f);
-    fseek(f, 0, SEEK_SET);  /* same as rewind(f); */
-
-    char* string = malloc (fsize + 1);
-    fread(string, 1, fsize, f);
-    fclose(f);
-
-    string[fsize] = 0;
-
-    ESP_LOGI(TAG, "Read from file: '%s'", string);
-    strcat(content, string);
-
-    // All done, unmount partition and disable SPIFFS
-    esp_vfs_spiffs_unregister(NULL);
-    ESP_LOGI(TAG, "SPIFFS unmounted");
-    return fsize;
-}
-
 
 /* An HTTP GET handler */
 esp_err_t hello_get_handler(httpd_req_t *req)
@@ -155,12 +99,13 @@ esp_err_t hello_get_handler(httpd_req_t *req)
 
     /* Send response with custom headers and body set as the
      * string passed in user context*/
-    long len = 1024;
-    char content[len];
-    content[0] = '\0';
-    long l = getIndex(&content);
-    ESP_LOGI(DEBUG, "Content ist: %s\n length ist:%ld", content, l);
-    httpd_resp_send(req, content, l);
+    char* buffer = getPage("/spiffs/index.html");
+
+    ESP_LOGI(DEBUG, "Buffer in main is: %s", buffer);
+
+    ESP_LOGI(DEBUG, "blabla");
+    httpd_resp_send(req, buffer, strlen(buffer));
+    free(buffer);
 
     /* After sending the HTTP response the old HTTP request
      * headers are lost. Check if HTTP request headers can be read now. */
@@ -182,6 +127,103 @@ httpd_uri_t hello = {
     /* Let's pass response string in user
      * context to demonstrate it's usage */
     .user_ctx  = "<h1>Hello World!</h1>"
+    
+};
+
+esp_err_t empty_get_handler(httpd_req_t *req)
+{
+    char*  buf;
+    size_t buf_len;
+
+    /* Get header value string length and allocate memory for length + 1,
+     * extra byte for null termination */
+    buf_len = httpd_req_get_hdr_value_len(req, "Host") + 1;
+    if (buf_len > 1) {
+        buf = malloc(buf_len);
+        /* Copy null terminated value string into buffer */
+        if (httpd_req_get_hdr_value_str(req, "Host", buf, buf_len) == ESP_OK) {
+            ESP_LOGI(TAG, "Found header => Host: %s", buf);
+        }
+        ESP_LOGI(TAG, "Buffer[0]: %s", buf);
+        free(buf);
+    }
+
+    buf_len = httpd_req_get_hdr_value_len(req, "Test-Header-2") + 1;
+    if (buf_len > 1) {
+        buf = malloc(buf_len);
+        if (httpd_req_get_hdr_value_str(req, "Test-Header-2", buf, buf_len) == ESP_OK) {
+            ESP_LOGI(TAG, "Found header => Test-Header-2: %s", buf);
+        }
+        ESP_LOGI(TAG, "Buffer[1]: %s", buf);
+        free(buf);
+    }
+
+    buf_len = httpd_req_get_hdr_value_len(req, "Test-Header-1") + 1;
+    if (buf_len > 1) {
+        buf = malloc(buf_len);
+        if (httpd_req_get_hdr_value_str(req, "Test-Header-1", buf, buf_len) == ESP_OK) {
+            ESP_LOGI(TAG, "Found header => Test-Header-1: %s", buf);
+        }
+        ESP_LOGI(TAG, "Buffer[2]: %s", buf);
+        free(buf);
+    }
+
+    /* Read URL query string length and allocate memory for length + 1,
+     * extra byte for null termination */
+    buf_len = httpd_req_get_url_query_len(req) + 1;
+    if (buf_len > 1) {
+        buf = malloc(buf_len);
+        if (httpd_req_get_url_query_str(req, buf, buf_len) == ESP_OK) {
+            ESP_LOGI(TAG, "Found URL query => %s", buf);
+            char param[32];
+            /* Get value of expected key from query string */
+            if (httpd_query_key_value(buf, "query1", param, sizeof(param)) == ESP_OK) {
+                ESP_LOGI(TAG, "Found URL query parameter => query1=%s", param);
+            }
+            if (httpd_query_key_value(buf, "query3", param, sizeof(param)) == ESP_OK) {
+                ESP_LOGI(TAG, "Found URL query parameter => query3=%s", param);
+            }
+            if (httpd_query_key_value(buf, "query2", param, sizeof(param)) == ESP_OK) {
+                ESP_LOGI(TAG, "Found URL query parameter => query2=%s", param);
+            }
+        }
+        ESP_LOGI(TAG, "Buffer[3]: %s", buf);
+        free(buf);
+    }
+
+    /* Set some custom headers */
+    httpd_resp_set_hdr(req, "Custom-Header-1", "Custom-Value-1");
+    httpd_resp_set_hdr(req, "Custom-Header-2", "Custom-Value-2");
+
+    /* Send response with custom headers and body set as the
+     * string passed in user context*/
+    
+    //char* buffer;
+    //getPage(&buffer, "abc");
+
+    
+    //httpd_resp_sendstr(req, req->user_ctx);
+
+    /* After sending the HTTP response the old HTTP request
+     * headers are lost. Check if HTTP request headers can be read now. */
+    if (httpd_req_get_hdr_value_len(req, "Host") == 0) {
+        ESP_LOGI(TAG, "Request headers lost");
+    }
+    gpio_pad_select_gpio(GPIO_NUM_2);
+    gpio_set_direction(GPIO_NUM_2, GPIO_MODE_OUTPUT);
+    gpio_set_level(GPIO_NUM_2, 1);
+    vTaskDelay(500 / portTICK_PERIOD_MS);
+    gpio_set_level(GPIO_NUM_2, 0);
+    return ESP_OK;
+}
+
+httpd_uri_t empty = {
+    .uri       = "/",
+    .method    = HTTP_GET,
+    .handler   = empty_get_handler,
+    /* Let's pass response string in user
+     * context to demonstrate it's usage */
+    .user_ctx  = "<h1>Hello User!</h1>"
     
 };
 
@@ -305,6 +347,7 @@ httpd_handle_t start_webserver(void)
         // Set URI handlers
         ESP_LOGI(TAG, "Registering URI handlers");
         httpd_register_uri_handler(server, &hello);
+        httpd_register_uri_handler(server, &empty);
         httpd_register_uri_handler(server, &echo);
         httpd_register_uri_handler(server, &ctrl);
         return server;

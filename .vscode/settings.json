@@ -1,5 +1,9 @@
 {
     "files.associations": {
-        "task.h": "c"
-    }
+        "task.h": "c",
+        "pageprovider.h": "c",
+        "string.h": "c",
+        "esp_system.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
