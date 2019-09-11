@@ -28,8 +28,7 @@
  * ie. #define EXAMPLE_WIFI_SSID "mywifissid"
 */
 
-static const char *TAG="APP";
-static const char *DEBUG="DEBUG";
+static const char *TAG="MAIN";
 
 /* An HTTP GET handler */
 esp_err_t hello_get_handler(httpd_req_t *req)
@@ -46,7 +45,6 @@ esp_err_t hello_get_handler(httpd_req_t *req)
         if (httpd_req_get_hdr_value_str(req, "Host", buf, buf_len) == ESP_OK) {
             ESP_LOGI(TAG, "Found header => Host: %s", buf);
         }
-        ESP_LOGI(TAG, "Buffer[0]: %s", buf);
         free(buf);
     }
 
@@ -56,7 +54,6 @@ esp_err_t hello_get_handler(httpd_req_t *req)
         if (httpd_req_get_hdr_value_str(req, "Test-Header-2", buf, buf_len) == ESP_OK) {
             ESP_LOGI(TAG, "Found header => Test-Header-2: %s", buf);
         }
-        ESP_LOGI(TAG, "Buffer[1]: %s", buf);
         free(buf);
     }
 
@@ -66,7 +63,6 @@ esp_err_t hello_get_handler(httpd_req_t *req)
         if (httpd_req_get_hdr_value_str(req, "Test-Header-1", buf, buf_len) == ESP_OK) {
             ESP_LOGI(TAG, "Found header => Test-Header-1: %s", buf);
         }
-        ESP_LOGI(TAG, "Buffer[2]: %s", buf);
         free(buf);
     }
 
@@ -89,7 +85,6 @@ esp_err_t hello_get_handler(httpd_req_t *req)
                 ESP_LOGI(TAG, "Found URL query parameter => query2=%s", param);
             }
         }
-        ESP_LOGI(TAG, "Buffer[3]: %s", buf);
         free(buf);
     }
 
@@ -99,6 +94,7 @@ esp_err_t hello_get_handler(httpd_req_t *req)
 
     /* Send response with custom headers and body set as the
      * string passed in user context*/
+    ESP_LOGI(TAG, "URI is: %s", req->uri);
     char* buffer = getPage("/spiffs/index.html");
     httpd_resp_send(req, buffer, strlen(buffer));
     free(buffer);
@@ -109,11 +105,6 @@ esp_err_t hello_get_handler(httpd_req_t *req)
     if (httpd_req_get_hdr_value_len(req, "Host") == 0) {
         ESP_LOGI(TAG, "Request headers lost");
     }
-    gpio_pad_select_gpio(GPIO_NUM_2);
-    gpio_set_direction(GPIO_NUM_2, GPIO_MODE_OUTPUT);
-    gpio_set_level(GPIO_NUM_2, 1);
-    vTaskDelay(500 / portTICK_PERIOD_MS);
-    gpio_set_level(GPIO_NUM_2, 0);
     return ESP_OK;
 }
 
@@ -414,8 +405,21 @@ static void initialise_wifi(void *arg)
     ESP_ERROR_CHECK(esp_wifi_start());
 }
 
+void testFunction(){
+    gpio_pad_select_gpio(GPIO_NUM_2);
+    gpio_set_direction(GPIO_NUM_2, GPIO_MODE_OUTPUT);
+
+    while(1){
+        gpio_set_level(GPIO_NUM_2, 1);
+        vTaskDelay(10 );
+        gpio_set_level(GPIO_NUM_2, 0);
+        vTaskDelay(10 );
+    }
+}
+
 void app_main()
 {
+    xTaskCreatePinnedToCore(testFunction, "Blinking stuff", 4096, (void*) 0, 2, NULL, 0);
     static httpd_handle_t server = NULL;
     ESP_ERROR_CHECK(nvs_flash_init());
     initialise_wifi(&server);
