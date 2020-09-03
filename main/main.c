@@ -396,7 +396,7 @@ static void initialise_wifi(void *arg)
     wifi_config_t wifi_config = {
         .sta = {
             .ssid = "DoraTheInternetExplora",
-            .password = "5LeuteMurken97",
+            .password = "*****",
         },
     };
     ESP_LOGI(TAG, "Setting WiFi configuration SSID %s...", wifi_config.sta.ssid);
